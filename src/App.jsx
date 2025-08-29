@@ -1,11 +1,18 @@
+import "./styles.css"
+
 const App = () => {
+  const textoElemento = "Nome: "
+  const funcPegarTextoBtn = () => "Enviar"
+  const funcAparecerAlert = () => alert("Botao clicado!")
   return (
-    <div style={{margin: 0, padding: 0, backgroundColor: "#EEE", borderRadius: 15}}>
-      <label htmlFor="nome" style={{}}>
-        Nome:
-      </label>
-      <input type="text" />
+    <div className="div-um">
+      <label htmlFor="nome" className="lab-nome">{textoElemento}</label>
+      <input id="nome" className="input-nome" type="text" placeholder="Seu nome..." />
+      <button id="" className="btn-enviar" onClick={() => funcAparecerAlert()}>
+        {funcPegarTextoBtn()}
+      </button>
     </div>
+
   )
 }
 
