@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-um {
+    width: 768px;
+    background-color: rgb(190, 80, 190);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lab-nome {
+    display: block;
+    margin: 5px;
+}
+
+.input-nome {
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.btn-enviar {
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 15px;
+    border: none;
+}
