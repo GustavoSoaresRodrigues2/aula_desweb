@@ -1,57 +1,59 @@
-const App = () => {
+import Pedido from "./Pedido"
+import Animal from "./Animal"
+import Cartao from "./Cartao"
 
+const App = () => {
   return (
     <>
-      <div className="container p-5">
-        {/* <div className="row">
-          <div className="col-12 bg-primary">
-            <i className="fa-g fa-2x fa-solid"></i>
-            <i className="fa-u fa-2x fa-solid"></i>
-            <i className="fa-s fa-2x fa-solid"></i>
-            <i className="fa-t fa-2x fa-solid"></i>
-            <i className="fa-a fa-2x fa-solid"></i>
-            <i className="fa-v fa-2x fa-solid"></i>
-            <i className="fa-o fa-2x fa-solid"></i>
-            <span></span>
-            <i className="fa-s fa-2x fa-solid"></i>
-            <i className="fa-o fa-2x fa-solid"></i>
-            <i className="fa-a fa-2x fa-solid"></i>
-            <i className="fa-r fa-2x fa-solid"></i>
-            <i className="fa-e fa-2x fa-solid"></i>
-            <i className="fa-s fa-2x fa-solid"></i>
-            <span></span>
-            <i className="fa-r fa-2x fa-solid"></i>
-            <i className="fa-o fa-2x fa-solid"></i>
-            <i className="fa-d fa-2x fa-solid"></i>
-            <i className="fa-r fa-2x fa-solid"></i>
-            <i className="fa-i fa-2x fa-solid"></i>
-            <i className="fa-g fa-2x fa-solid"></i>
-            <i className="fa-u fa-2x fa-solid"></i>
-            <i className="fa-e fa-2x fa-solid"></i>
-            <i className="fa-s fa-2x fa-solid"></i>
-          </div>
-        </div> */}
+      <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-6 col-xl-3">
-            <div className="card">
-              <div className="card-header text-muted">
-                03-09-2025
-              </div>
-              <div className="card-body d-flex">
-                <i className="fa-solid fa-car fa-2x"></i>
-                <p>Carro</p>
-                <p>Porsche Amarelo</p>
-              </div>
-            </div>
+            <Pedido
+              data="14/09/2025"
+              icone="car"
+              titulo="Carro"
+              desc="Porshe Amarelo"
+            />
           </div>
           <div className="col-sm-12 col-md-6 col-xl-3">
-            
+            <Pedido
+              data="20/07/2025"
+              icone="house"
+              titulo="Casa"
+              desc="Casa Amarela"
+            />
           </div>
           <div className="col-sm-12 col-md-6 col-xl-3">
-            
+            <Pedido
+              data="11/04/2025"
+              icone="tractor"
+              titulo="Trator"
+              desc="Trator Amarelo"
+            />
           </div>
           <div className="col-sm-12 col-md-6 col-xl-3">
-            
+            <Pedido
+              data="30/01/2025"
+              icone="computer"
+              titulo="Computador"
+              desc="Computador Amarelo"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="d col-12">
+            <Cartao cabecalho="Hipopotamos se alimentando">
+              <Animal
+                tipo="hippo"
+                tamanho="4"
+              />
+              <i class="fa-solid fa-2x fa-seedling"></i>
+              <Animal
+                tipo="hippo"
+                tamanho="4"
+                espelhamento="flip-horizontal"
+              />
+            </Cartao>
           </div>
         </div>
       </div>
