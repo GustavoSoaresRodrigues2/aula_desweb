@@ -1,4 +1,4 @@
-const Animal = ({tipo, tamanho, espelhamento}) => {
+const Animal = ({tipo, tamanho, espelhamento, cor}) => {
   return (
     <>
       <i className={`
@@ -7,6 +7,7 @@ const Animal = ({tipo, tamanho, espelhamento}) => {
         fa-solid 
         fa-${espelhamento} 
         m-2
+        text-${cor}
         `} />
     </>
   )
