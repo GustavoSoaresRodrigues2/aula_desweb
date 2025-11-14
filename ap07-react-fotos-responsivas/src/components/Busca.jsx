@@ -1,47 +1,50 @@
-import React, { useState, Component } from 'react'
+import React, { Component } from 'react'
 import { Button } from 'primereact/button'
-import { InputText } from 'primereact/inputtext'
-import { InputIcon } from 'primereact/inputicon'
 import { IconField } from 'primereact/iconfield'
-
+import { InputIcon } from 'primereact/inputicon'
+import { InputText } from 'primereact/inputtext'
 export default class Busca extends Component {
-    state = {
-        termoDeBusca: ''
-    }
+  state = {
+    termoDeBusca: ''
+  }
 
-    onTermoAlterado = (event) => {
-        this.setState({ termoDeBusca: event.target.value })
-    }
+  onTermoAlterado = (event) => {
+    //console.log(event.target.value)
+    // this.state.termoDeBusca = event.target.value
+    this.setState({
+      termoDeBusca: event.target.value
+    })
+  }
 
-    onFormSubmit = (event) => {
-        event.preventDefault()
-        this.props.onBuscaRealizada(this.state.termoDeBusca)
-    }
+  onFormSubmit = (event) => {
+    event.preventDefault()
+    this.props.onBuscaRealizada(this.state.termoDeBusca)
+  }
 
-    render() {
-        return (
-            <>
-                <form action="" onSubmit={this.onFormSubmit}>
-                    <section className='flex flex-column'>
-                        <IconField className='w-full' iconPosition='left'>
-                            <InputIcon className='pi pi-search' />
-                            <InputText className='w-full' 
-                                placeholder={this.props.dica}
-                                onChange={this.onTermoAlterado} 
-                                value={this.state.termoDeBusca}
-                            />
-                        </IconField>
-                        <Button className='mt-5' label='Aparecer Imagens'
-                            onClick={this.onTermoAlterado}
-                        />
-                    </section>
-                </form>
-
-            </>
-        )
-    }
+  
+  render() {
+    return (
+      <form onSubmit={this.onFormSubmit}>
+        <div className='flex flex-column'>
+          <IconField 
+            className='w-full'
+            iconPosition='left'>
+            <InputIcon className='pi pi-search'/>
+            <InputText
+              value={this.state.termoDeBusca}
+              onChange={this.onTermoAlterado} 
+              className='w-full'
+              placeholder={this.props.dica}/>
+          </IconField>
+          <Button 
+            className='mt-3'
+            label='OK'/>
+        </div>
+      </form>
+    )
+  }
 }
 
 Busca.defaultProps = {
-    dica: 'Buscar...'
+  dica: 'Buscar'
 }

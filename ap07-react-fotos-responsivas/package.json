@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pexels": "^1.4.0",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.7",
